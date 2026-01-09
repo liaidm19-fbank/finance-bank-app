@@ -1,0 +1,32 @@
+.body {
+    background-image: url("/public/images/fondo2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.service-item {
+    transition: background-color .2s ease;
+}
+
+.service-item:hover {
+    background-color: #f8f9fa;
+}
+
+.service-icon {
+    color: #1a5f4a;
+    transition: color .2s ease;
+}
+
+.service-item:hover .service-icon {
+    color: #d4af37;
+}
+
+.service-text {
+    color: #6c757d;
+    transition: color .2s ease;
+}
+
+.service-item:hover .service-text {
+    color: #1a4d7a;
+}
