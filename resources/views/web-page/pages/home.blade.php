@@ -8,7 +8,7 @@
 
 @extends('web-page.layouts.main')
 
-@section('title', 'Inicio')
+@section('title', 'Finance Bank')
 
 @section('content')
     @include('web-page.components.hero-section')

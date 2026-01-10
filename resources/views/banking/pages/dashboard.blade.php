@@ -8,34 +8,28 @@
                 Transacciones más usadas
             </h5>
 
-            <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-5">
-                <div class="col">
-                    @include('banking.components.action-card', ['title' => 'Transferir'])
-                </div>
-
-                <div class="col">
-                    @include('banking.components.action-card', ['title' => 'Editar topes'])
-                </div>
-
-                <div class="col">
-                    @include('banking.components.action-card', ['title' => 'Pagar facturas'])
-                </div>
-
-                <div class="col">
-                    @include('banking.components.action-card', ['title' => 'Bolsillos'])
-                </div>
-
-                <div class="col">
-                    @include('banking.components.action-card', ['title' => 'Extractos'])
-                </div>
-
-                <div class="col">
-                    @include('banking.components.action-card', [
+            @php
+                $actions = [
+                    ['title' => 'Transferir'],
+                    ['title' => 'Editar topes'],
+                    ['title' => 'Pagar facturas'],
+                    ['title' => 'Bolsillos'],
+                    ['title' => 'Extractos'],
+                    [
                         'title' => 'Retirar dinero',
                         'href' => route('banking.withdraw')
-                    ])
-                </div>
+                    ],
+                ];
+            @endphp
+
+            <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-5">
+                @foreach ($actions as $action)
+                    <div class="col">
+                        @include('banking.components.action-card', $action)
+                    </div>
+                @endforeach
             </div>
+
         </div>
 
         {{-- Productos --}}

@@ -33,10 +33,7 @@ $total = $amount + $bank['fee'];
             <div class="d-flex justify-content-between">
                 <span>Comisión</span><span>$ {{ number_format($bank['fee'], 0, ',', '.') }}</span>
             </div>
-            {{--<div class="d-flex justify-content-between">
-                <span>Finance Bank</span><span>$ 2.500</span>
-            </div> --}}
-
+            
             <hr>
 
             <div class="d-flex justify-content-between fw-semibold">
