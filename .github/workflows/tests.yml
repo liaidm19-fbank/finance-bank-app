@@ -47,6 +47,9 @@ jobs:
       - name: Generate Application Key
         run: php artisan key:generate
 
+      - name: Clear Laravel caches
+        run: php artisan optimize:clear
+
       - name: Build Assets
         run: npm run build
 
