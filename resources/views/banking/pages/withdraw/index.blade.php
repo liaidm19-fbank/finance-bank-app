@@ -1,4 +1,10 @@
-<x-layouts.app.banking :title="'Seleccionar Banco'">
+{{-- <x-layouts.app :title="'Seleccionar Banco'"> --}}
+
+@extends('components.layouts.app.banking')
+
+@section('title', 'Seleccionar Banco')
+
+@section('content')
 
 <section class="d-flex flex-column gap-4">
 
@@ -55,5 +61,6 @@
     </div>
 
 </section>
+@endsection
 
-</x-layouts.app.banking>
+{{-- </x-layouts.app> --}}

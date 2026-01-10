@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>{{ $title ?? 'FinanceBank - Banking' }}</title>
+    <title>@yield('title', 'FinanceBank - Banking')</title>
 
     <link rel="icon" type="image/png" href="{{ asset('financebank-logo.png') }}">
 
@@ -28,9 +28,13 @@
         {{-- Sidebar --}}
         @include('banking.components.sidebar')
 
-        {{-- Main content --}}
+        {{-- Main content 
         <main class="flex-fill p-4 body">
             {{ $slot }}
+        </main>--}}
+
+        <main class="flex-fill p-4 body">
+            @yield('content')
         </main>
 
     </div>

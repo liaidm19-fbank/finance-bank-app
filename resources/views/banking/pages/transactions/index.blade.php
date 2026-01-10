@@ -1,4 +1,10 @@
-<x-layouts.app.banking :title="'Transacciones'">
+{{--  <x-layouts.app :title="'Transacciones'"> --}}
+
+@extends('components.layouts.app.banking')
+
+@section('title', 'Transacciones')
+
+@section('content')
 
 <section class="d-flex flex-column gap-4">
     <h1 class="text-white fs-4 fw-semibold">Historial de transacciones</h1>
@@ -9,4 +15,6 @@
     ])
 </section>
 
-</x-layouts.app.banking>
+@endsection
+
+{{-- </x-layouts.app>--}}

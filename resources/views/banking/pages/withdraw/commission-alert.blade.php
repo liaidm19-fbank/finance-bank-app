@@ -1,4 +1,10 @@
-<x-layouts.app.banking :title="'Aviso de comisión'">
+{{--<x-layouts.app :title="'Aviso de comisión'">--}}
+
+@extends('components.layouts.app.banking')
+
+@section('title', 'Aviso de comisión')
+
+@section('content')
 
 @php
     $commission = 5425;
@@ -45,5 +51,5 @@
     </a>
 
 </section>
-
-</x-layouts.app.banking>
+@endsection
+{{--</x-layouts.app>--}}

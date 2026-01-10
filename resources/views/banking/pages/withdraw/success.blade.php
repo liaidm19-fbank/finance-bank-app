@@ -1,4 +1,10 @@
-<x-layouts.app.banking :title="'Retiro Exitoso'">
+{{--<x-layouts.app :title="'Retiro Exitoso'">--}}
+
+@extends('components.layouts.app.banking')
+
+@section('title', 'Retiro Exitoso')
+
+@section('content')
 
 @php
 $reference = 'RET-' . strtoupper(Str::random(6));
@@ -44,5 +50,6 @@ $reference = 'RET-' . strtoupper(Str::random(6));
     </a>
 
 </section>
+@endsection
 
-</x-layouts.app.banking>
+{{--</x-layouts.app>--}}

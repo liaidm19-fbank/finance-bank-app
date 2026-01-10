@@ -1,4 +1,10 @@
-<x-layouts.app.banking title="Retiro">
+{{--<x-layouts.app title="Retiro">  --}}
+
+@extends('components.layouts.app.banking')
+
+@section('title', 'Retiro')
+
+@section('content')
 
 <section class="max-w-md d-flex flex-column gap-4">
 
@@ -45,6 +51,7 @@
 
 </section>
 
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -80,5 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+@endsection
 
-</x-layouts.app.banking>
+
+{{--</x-layouts.app> --}}

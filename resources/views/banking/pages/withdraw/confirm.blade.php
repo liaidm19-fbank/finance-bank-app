@@ -1,4 +1,10 @@
-<x-layouts.app.banking :title="'Confirmar retiro'">
+{{--<x-layouts.app :title="'Confirmar retiro'"> --}}
+
+@extends('components.layouts.app.banking')
+
+@section('title', 'Confirmar Retiro')
+
+@section('content')
 
 @php
 $withdrawBanks = [
@@ -64,4 +70,6 @@ $total = $amount + $bank['fee'];
 </section>
 @endif
 
-</x-layouts.app.banking>
+@endsection
+
+{{-- </x-layouts.app>  --}}

@@ -3,7 +3,6 @@
     {{-- Saludo --}}
     <span class="fw-medium">
         Hola, {{ auth()->user()->name }} 👋 
-        {{-- Hola, Dennis Garcia 👋 --}}
     </span>
 
     {{-- Fecha y hora --}}

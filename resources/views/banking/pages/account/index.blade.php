@@ -1,12 +1,19 @@
-<x-layouts.app.banking :title="'Mis cuentas'">
+{{--<x-layouts.app :title="'Mis cuentas'"> --}}
 
-    <section class="d-flex flex-column gap-4">
-        <h1 class="text-white fs-4 fw-semibold">Mis cuentas</h1>
+@extends('components.layouts.app.banking')
 
-        @include('banking.components.account-card', [
-            'name' => 'Cuenta de Ahorros',
-            'balance' => '$ 2,755,167.00 USD'
-        ])
-    </section>
+@section('title', 'Mis cuentas')
 
-</x-layouts.app.banking>
+@section('content')
+
+<section class="d-flex flex-column gap-4">
+    <h1 class="text-white fs-4 fw-semibold">Mis cuentas</h1>
+
+    @include('banking.components.account-card', [
+        'name' => 'Cuenta de Ahorros',
+        'balance' => '$ 2,755,167.00 USD'
+    ])
+</section>
+
+@endsection
+{{-- </x-layouts.app> --}}
