@@ -1,6 +1,6 @@
 {{--<x-layouts.app :title="'Aviso de comisión'">--}}
 
-@extends('components.layouts.app.banking')
+@extends('layouts.app.banking')
 
 @section('title', 'Aviso de comisión')
 

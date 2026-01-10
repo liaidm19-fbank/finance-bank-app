@@ -1,6 +1,6 @@
 {{--<x-layouts.app :title="'Confirmar retiro'"> --}}
 
-@extends('components.layouts.app.banking')
+@extends('layouts.app.banking')
 
 @section('title', 'Confirmar Retiro')
 

@@ -1,6 +1,6 @@
 {{--  <x-layouts.app :title="'Transacciones'"> --}}
 
-@extends('components.layouts.app.banking')
+@extends('layouts.app.banking')
 
 @section('title', 'Transacciones')
 
