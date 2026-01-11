@@ -20,13 +20,13 @@
 
 <body class="bg-body-secondary">
 
-    {{-- Topbar 
-    @include('banking.components.topbar') --}}
+    {{-- Topbar --}}
+    @include('banking.components.topbar') 
 
     <div class="d-flex">
 
-        {{-- Sidebar 
-        @include('banking.components.sidebar')--}}
+        {{-- Sidebar --}}
+        @include('banking.components.sidebar')
 
         {{-- Main content 
         <main class="flex-fill p-4 body">
