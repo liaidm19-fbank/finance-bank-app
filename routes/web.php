@@ -30,14 +30,10 @@ Route::get('/commercial', function () {
     return view('web-page.pages.commercial');
 })->name('commercial');
 
-Route::get('/dashboard', function () {
-    return redirect()->route('banking.dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
-
-/*Route::view('dashboard', 'banking.pages.dashboard')
+Route::view('dashboard', 'banking.pages.dashboard')
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');*/
+    ->name('dashboard');
 
 Route::middleware(['auth', 'verified'])
     ->prefix('banking')
