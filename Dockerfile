@@ -20,7 +20,6 @@ COPY --from=frontend /app/public/build ./public/build
 RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-RUN php artisan optimize:clear
 
 EXPOSE 8000
 CMD php artisan serve --host=0.0.0.0 --port=8000
