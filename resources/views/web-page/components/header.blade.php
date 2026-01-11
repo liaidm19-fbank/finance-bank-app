@@ -13,7 +13,7 @@
     <div class="container">
 
         {{-- Left menu --}}
-        <div class="collapse navbar-collapse">
+        <div class="navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-4">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Personal</a>
