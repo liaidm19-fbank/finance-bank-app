@@ -15,7 +15,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
 COPY . .
-COPY --from=frontend /app/public/dist ./public/dist
+COPY --from=frontend /app/public/build ./public/build
 
 RUN composer install --no-dev --optimize-autoloader
 RUN chown -R www-data:www-data storage bootstrap/cache
