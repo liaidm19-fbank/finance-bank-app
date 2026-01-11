@@ -6,7 +6,7 @@
 
     <title>@yield('title', 'Finance Bank')</title>
 
-    <link rel="icon" type="image/png" href="{{ asset('/financebank-logo.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('financebank-logo.png') }}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
