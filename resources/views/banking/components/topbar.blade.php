@@ -11,7 +11,7 @@
     <form method="POST" action="{{ route('logout') }}">
         @csrf
         <flux:menu.item as="button" type="submit" icon="arrow-right-start-on-rectangle" data-test="logout-button">
-            {{ __('Log Out') }}
+            {{ __('Salir') }}
         </flux:menu.item>
     </form>
 
