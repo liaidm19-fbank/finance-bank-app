@@ -49,9 +49,6 @@ jobs:
 
       - name: Clear Laravel caches
         run: php artisan optimize:clear
-      
-      - name: Make Migrations
-        run: php artisan migrate --force
 
       - name: Build Assets
         run: npm run build
