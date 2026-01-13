@@ -14,7 +14,7 @@ return [
             'id' => 'wells-fargo',
             'name' => 'Wells Fargo',
             'description' => 'Disponible 24/7',
-            'fee' => 250,
+            'fee' => 350,
             'logo' => 'wells-fargo.png'
         ],
         [
@@ -28,7 +28,7 @@ return [
             'id' => 'td-bank',
             'name' => 'TD Bank',
             'description' => 'Retiros rápidos',
-            'fee' => 250,
+            'fee' => 350,
             'logo' => 'td-bank.png'
         ],
     ],

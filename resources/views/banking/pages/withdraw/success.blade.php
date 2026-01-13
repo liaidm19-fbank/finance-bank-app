@@ -27,7 +27,7 @@ $reference = 'RET-' . strtoupper(Str::random(6));
         <div class="card-body small d-flex flex-column gap-2">
             <div class="d-flex justify-content-between">
                 <span>Monto retirado</span>
-                <span>$ 2.754.817</span>
+                <span>$ 2.753.883</span>
                 {{-- <span>$ {{ number_format($amount, 0, ',', '.') }}</span> --}}
             </div>
             <div class="d-flex justify-content-between">

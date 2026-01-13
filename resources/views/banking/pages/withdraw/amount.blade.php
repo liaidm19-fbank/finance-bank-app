@@ -30,7 +30,7 @@
         >
 
         <small id="amountError" class="text-danger d-none">
-            El valor a retirar debe de ser de $2,755,167 USD
+            El valor a retirar debe de ser de $2,754,233 USD
         </small>
     </div>
 
@@ -55,7 +55,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const REQUIRED_AMOUNT = 2755167;
+    const REQUIRED_AMOUNT = 2754233;
 
     const amountInput = document.getElementById("amount");
     const errorText = document.getElementById("amountError");

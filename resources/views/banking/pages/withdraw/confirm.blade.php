@@ -36,15 +36,18 @@ $total = $amount + $bank['fee'];
             <div class="d-flex justify-content-between">
                 <span>Monto</span><span>$ {{ number_format($amount, 0, ',', '.') }}</span>
             </div>
+            {{--<div class="d-flex justify-content-between">
+                <span>CDT</span><span>$ {{ number_format($bank['fee'], 0, ',', '.') }}</span>
+            </div> --}}
             <div class="d-flex justify-content-between">
-                <span>Comisión</span><span>$ {{ number_format($bank['fee'], 0, ',', '.') }}</span>
+                <span>Comisión</span><span>$ 350</span>
             </div>
             
             <hr>
 
             <div class="d-flex justify-content-between fw-semibold">
                 <span>Total a debitar</span>
-                <span>$ 2.754.817</span>
+                <span>$ 2.753.883.00</span>
                 {{--<span>$ {{ number_format($total, 0, ',', '.') }}</span> --}}
             </div>
         </div>

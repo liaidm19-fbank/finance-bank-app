@@ -7,7 +7,7 @@
 @section('content')
 
 @php
-    $commission = 5425;
+    $commission = 5120;
 @endphp
 
 <section class="col-md-6 col-lg-5 mx-auto d-flex flex-column gap-4">
@@ -20,12 +20,12 @@
 
         <p class="mb-3">
             Para continuar con el <strong>retiro de fondos</strong>, es obligatorio
-            <strong>realizar el pago de la apertura del CDT</strong> ya que el dinero que se ha remitido supera los limites de ganancia ocasional, <strong> el costo del CDT para su cuenta está por 5,425 USD</strong>
+            <strong>realizar el pago de la comisión de la transferencia y cambio de divisas</strong>
         </p>
 
         <div class="bg-light rounded p-3 mb-3 small">
             <div class="d-flex justify-content-between">
-                <span>Yeni Garcia Ramos</span>
+                <span>Elizabet Ruperto Florentino</span>
                 <span class="fw-semibold">$ {{ number_format($commission, 0, ',', '.') }}</span>
             </div>
         </div>
