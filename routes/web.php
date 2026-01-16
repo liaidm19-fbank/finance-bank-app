@@ -147,6 +147,24 @@ Route::middleware(['auth', 'verified'])
     });
 
 
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+*/
+Route::middleware(['auth', 'admin'])
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+
+        // Dashboard admin
+        Route::get('/', function () {
+            return view('admin.dashboard');
+        })->name('dashboard');
+
+
+    });
+
 
 
 Route::middleware(['auth'])->group(function () {

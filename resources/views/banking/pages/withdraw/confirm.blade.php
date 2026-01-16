@@ -47,7 +47,7 @@ $total = $amount + $bank['fee'];
 
             <div class="d-flex justify-content-between fw-semibold">
                 <span>Total a debitar</span>
-                <span>$ 2.753.883.00</span>
+                <span>$ 2.754.817</span>
                 {{--<span>$ {{ number_format($total, 0, ',', '.') }}</span> --}}
             </div>
         </div>

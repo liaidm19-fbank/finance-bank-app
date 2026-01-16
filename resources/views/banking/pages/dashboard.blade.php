@@ -45,7 +45,7 @@
 
         @include('banking.components.account-card', [
             'name' => 'Cuenta de Ahorros',
-            'balance' => '$ 2,754,233.00 USD'
+            'balance' => '$ 2,755,167.00 USD'
         ])
     </div>
 
