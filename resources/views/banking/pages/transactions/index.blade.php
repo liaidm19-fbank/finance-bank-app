@@ -13,6 +13,10 @@
         'label' => 'Transferencia recibida - 08/01/26',
         'amount' => '$2,755,167.00'
     ])
+    @include('banking.components.transaction-row', [
+        'label' => 'Transferencia recibida - 16/01/26',
+        'amount' => '$3,850.00'
+    ])
 </section>
 
 @endsection

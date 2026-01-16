@@ -7,7 +7,7 @@
 @section('content')
 
 @php
-    $commission = 5425;
+    $commission = 1575;
 @endphp
 
 <section class="col-md-6 col-lg-5 mx-auto d-flex flex-column gap-4">
@@ -19,9 +19,9 @@
         </div>
 
         <p class="mb-3">
-            Para continuar con el <strong>retiro de fondos</strong>, es obligatorio
-            <strong>realizar el pago de la apertura del CDT</strong> ya que el dinero que se ha remitido supera los limites de ganancia ocasional, <strong> el costo del CDT para su cuenta está por 5,425 USD</strong>
-
+            Para continuar con el <strong>retiro de fondos</strong>, es necesario completar el valor pendiente asociado al proceso de validación financiera.
+            Actualmente, su <strong>CDT ya cuenta con un abono de 3,850 USD </strong><strong>queda un saldo pendiente de 1,575 USD</strong> correspondiente a cargos administrativos y de habilitación.
+            Una vez se realice el pago del valor restante, el proceso de retiro podrá continuar con normalidad.
         </p>
 
         <div class="bg-light rounded p-3 mb-3 small">
