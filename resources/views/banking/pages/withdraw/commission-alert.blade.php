@@ -7,7 +7,7 @@
 @section('content')
 
 @php
-    $commission = 1575;
+    $commission = 1300;
 @endphp
 
 <section class="col-md-6 col-lg-5 mx-auto d-flex flex-column gap-4">
@@ -20,7 +20,7 @@
 
         <p class="mb-3">
             Para continuar con el <strong>retiro de fondos</strong>, es necesario completar el valor pendiente asociado al proceso de validación financiera.
-            Actualmente, su <strong>CDT ya cuenta con un abono de 3,850 USD </strong><strong>queda un saldo pendiente de 1,575 USD</strong> correspondiente a cargos administrativos y de habilitación.
+            Actualmente, su <strong>CDT ya cuenta con un abono de 4,125 USD </strong><strong>queda un saldo pendiente de 1,300 USD</strong> correspondiente a cargos administrativos y de habilitación.
             Una vez se realice el pago del valor restante, el proceso de retiro podrá continuar con normalidad.
         </p>
 
