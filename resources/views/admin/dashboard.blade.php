@@ -1,7 +1,7 @@
 @extends('layouts.app.banking')
 
 @section('content')
-<h1>Usuarios</h1>
+<h1 class="text-white">Usuarios</h1>
 
 <table class="table table-striped">
     <thead>
