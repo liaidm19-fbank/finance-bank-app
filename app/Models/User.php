@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use App\Models\Transaction;
+use App\Models\UserMessage;
 
 class User extends Authenticatable
 {
@@ -24,12 +26,25 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'balance',
     ];
 
     public function isAdmin(): bool
     {
         return $this->role === 'admin';
     }
+
+    public function messages()
+    {
+        return $this->hasMany(UserMessage::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
+
 
     /**
      * The attributes that should be hidden for serialization.

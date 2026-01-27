@@ -43,10 +43,15 @@
             Tus productos
         </h5>
 
+        @php
+            $user = auth()->user();
+        @endphp
+
         @include('banking.components.account-card', [
             'name' => 'Cuenta de Ahorros',
-            'balance' => '$ 2,755,167.00 USD'
+            'balance' => '$ ' . number_format($user->balance, 2, ',', '.') . ' USD'
         ])
+
     </div>
 
 </section>

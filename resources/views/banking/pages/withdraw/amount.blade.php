@@ -1,10 +1,12 @@
-{{--<x-layouts.app title="Retiro">  --}}
-
 @extends('layouts.app.banking')
 
 @section('title', 'Retiro')
 
 @section('content')
+
+@php
+    $balance = auth()->user()->balance;
+@endphp
 
 <section class="max-w-md d-flex flex-column gap-4">
 
@@ -16,6 +18,17 @@
         {{ $bank['description'] }}
     </p>
 
+    {{-- SALDO DISPONIBLE --}}
+    <div class="bg-secondary bg-opacity-25 rounded p-3 text-white small">
+        <div class="d-flex justify-content-between">
+            <span>Saldo disponible</span>
+            <span class="fw-semibold">
+                $ {{ number_format($balance, 0, ',', '.') }}
+            </span>
+        </div>
+    </div>
+
+    {{-- MONTO --}}
     <div class="bg-dark rounded p-3">
         <label class="text-white form-label small">
             Monto a retirar
@@ -30,7 +43,9 @@
         >
 
         <small id="amountError" class="text-danger d-none">
-            El valor a retirar debe de ser de $2,755,167 USD
+            Debes retirar exactamente 
+            <strong>$ {{ number_format($balance, 0, ',', '.') }}</strong> 
+            para continuar.
         </small>
     </div>
 
@@ -55,17 +70,18 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const REQUIRED_AMOUNT = 2755167;
+    const REQUIRED_AMOUNT = {{ (int) $balance }};
+    const bankId = "{{ $bank['id'] }}";
 
     const amountInput = document.getElementById("amount");
     const errorText = document.getElementById("amountError");
     const confirmBtn = document.getElementById("confirmBtn");
 
     amountInput.addEventListener("input", function () {
-        const value = parseInt(amountInput.value, 10);
+        const value = parseFloat(amountInput.value);
 
         if (value !== REQUIRED_AMOUNT) {
-            // ❌ inválido
+            // ❌ monto incorrecto
             amountInput.classList.add("is-invalid");
             errorText.classList.remove("d-none");
 
@@ -73,14 +89,16 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmBtn.setAttribute("aria-disabled", "true");
             confirmBtn.href = "#";
         } else {
-            // ✅ válido
+            // ✅ monto correcto (saldo total exacto)
             amountInput.classList.remove("is-invalid");
             errorText.classList.add("d-none");
 
             confirmBtn.classList.remove("disabled");
             confirmBtn.removeAttribute("aria-disabled");
 
-            confirmBtn.href = "{{ route('banking.withdraw.confirm', ['bank' => $bank['id']]) }}?amount=" + REQUIRED_AMOUNT;
+            confirmBtn.href =
+                "{{ route('banking.withdraw.confirm', ['bank' => $bank['id']]) }}" +
+                "?amount=" + REQUIRED_AMOUNT;
         }
     });
 
@@ -88,6 +106,3 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 @endsection
-
-
-{{--</x-layouts.app> --}}

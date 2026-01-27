@@ -20,6 +20,7 @@ class AdminUserSeeder extends Seeder
                 'name' => 'FinanceBank Admin',
                 'password' => Hash::make('admin123'),
                 'role' => 'admin',
+                'balance' => 0,
                 'email_verified_at' => now(),
             ]
         );

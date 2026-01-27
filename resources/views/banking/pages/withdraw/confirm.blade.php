@@ -22,7 +22,8 @@ $bank = collect($withdrawBanks)->firstWhere('id', $bankId);
     <p class="text-danger">Banco no encontrado</p>
 @else
 @php
-$total = $amount + $bank['fee'];
+//$total = $amount - $bank['fee'];
+$amount
 @endphp
 
 <section class="col-md-6 col-lg-4 mx-auto d-flex flex-column gap-4">
@@ -37,18 +38,18 @@ $total = $amount + $bank['fee'];
                 <span>Monto</span><span>$ {{ number_format($amount, 0, ',', '.') }}</span>
             </div>
             {{--<div class="d-flex justify-content-between">
-                <span>CDT</span><span>$ {{ number_format($bank['fee'], 0, ',', '.') }}</span>
-            </div> --}}
+                <span>Comisión</span><span>$ {{ number_format($bank['fee'], 0, ',', '.') }}</span>
+            </div> 
             <div class="d-flex justify-content-between">
                 <span>Comisión</span><span>$ 350</span>
-            </div>
+            </div>--}}
             
             <hr>
 
             <div class="d-flex justify-content-between fw-semibold">
                 <span>Total a debitar</span>
-                <span>$ 2.754.817</span>
-                {{--<span>$ {{ number_format($total, 0, ',', '.') }}</span> --}}
+                {{--<span>$ 2.754.817</span>--}}
+                <span>$ {{ number_format($amount, 0, ',', '.') }}</span> 
             </div>
         </div>
     </div>
